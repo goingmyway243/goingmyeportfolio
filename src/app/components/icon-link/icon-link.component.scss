@@ -1,0 +1,14 @@
+.icon-link {
+    display: block;
+    width: auto;
+    height: 2rem;
+    overflow: visible;
+
+    img {
+        transition: 300ms;
+    }
+
+    :hover {
+        height: 2.5rem;
+    }
+}

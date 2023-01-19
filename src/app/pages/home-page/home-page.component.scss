@@ -1,0 +1,64 @@
+.app-home-page {
+    
+    .profile {
+        .avatar {
+            display: flex;
+            justify-content: center;
+            padding-top: 5rem;
+    
+            .image-wrapper {
+                border-radius: 50%;
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+
+        .whoami {
+            text-align: center;
+            margin-top: 1rem;
+
+            .contact {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                padding: 0.5rem;
+            }
+        }
+
+        .more-info {
+            margin-top: 3rem;
+            text-align: center;
+
+            .redirect-card {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 1rem 0;
+                gap: 1rem;
+
+                .card {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    gap: 0.5rem;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                    background-color:  deepskyblue;
+                    color: black;
+                    cursor: pointer;
+                    transition: 300ms;
+
+                    i {
+                        font-size: 2rem;
+                    }
+
+                    &:hover {
+                        background-color: lightskyblue;
+                        color: blue;
+                    }
+                }
+            }
+        }
+    }
+}

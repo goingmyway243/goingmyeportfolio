@@ -1,0 +1,7 @@
+version: "1"
+
+services:
+    goingmyapp:
+      build: .
+      ports: 
+        - 4200:80

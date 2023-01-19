@@ -1,0 +1,44 @@
+.app-wotagei-page {
+    padding: 2rem;
+
+    h1 {
+        text-align: center;
+    }
+
+    .list-video {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 1rem;
+        margin-top: 3rem;
+
+        .yt-player {
+            border-radius: 0.5rem;
+        }
+    }
+
+    .more {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 1.2rem;
+
+        a {
+            transition: 300ms;
+            
+            &:hover {
+                color: red;
+            } 
+        }
+    }
+    
+    .go-back {
+        text-align: center;
+        margin-top: 3rem;
+        color: blueviolet;
+        cursor: pointer;
+        transition: 300ms;
+
+        &:hover {
+            color: blue;
+        }
+    }
+}

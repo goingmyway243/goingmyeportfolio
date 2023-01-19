@@ -1,0 +1,66 @@
+<div class="app-home-page">
+    <div class="profile">
+        <div class="avatar">
+            <div class="image-wrapper">
+                <img src="assets/imgs/profile.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="whoami">
+            <h2>Hi, I'm Light - Nguyen Hai Dang</h2>
+            <br />
+            <p>I'm a software developer in Orient Software Company.</p>
+            <p>I'm also a Wotagei/Cyalume dancer, a cosplayer who cos characters in game almost.</p>
+            <br />
+            <div>You can contact me via:</div>
+            <div class="contact">
+                <app-icon-link 
+                    [href]="'https://www.facebook.com/LSankyuC/'"
+                    [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png'">
+                </app-icon-link>
+
+                <app-icon-link
+                    [href]="'https://zalo.me/0961362843'"
+                    [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/2048px-Icon_of_Zalo.svg.png'">
+                </app-icon-link>
+                
+                <app-icon-link 
+                    [href]="'https://twitter.com/SankyuHikari'"
+                    [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png'">
+                </app-icon-link>
+
+                <app-icon-link 
+                    [href]="'https://www.linkedin.com/in/light39/'"
+                    [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png'">
+                </app-icon-link>
+
+                <app-icon-link 
+                    [href]="'https://github.com/goingmyway243'"
+                    [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png'">
+                </app-icon-link>
+            </div>
+        </div>
+
+        <div class="more-info">
+            <h3>Want to know more about me?</h3>
+
+            <div class="redirect-card">
+                <div class="card" [routerLink]="['cosplay']">
+                    <i class="uil uil-nerd"></i> Cosplay
+                </div>
+
+                <div class="card" [routerLink]="['wotagei']">
+                    <i class="uil uil-laughing"></i> Wotagei
+                </div>
+
+                <div class="card" [routerLink]="['dancecover']">
+                    <i class="uil uil-kid"></i> Dance cover
+                </div>
+
+                <div class="card" [routerLink]="['myprojects']">
+                    <i class="uil uil-surprise"></i> My projects
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
