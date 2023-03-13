@@ -14,28 +14,23 @@
             <br />
             <div>You can contact me via:</div>
             <div class="contact">
-                <app-icon-link 
-                    [href]="'https://www.facebook.com/LSankyuC/'"
+                <app-icon-link [href]="'https://www.facebook.com/LSankyuC/'"
                     [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png'">
                 </app-icon-link>
 
-                <app-icon-link
-                    [href]="'https://zalo.me/0961362843'"
+                <app-icon-link [href]="'https://zalo.me/0961362843'"
                     [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/2048px-Icon_of_Zalo.svg.png'">
                 </app-icon-link>
-                
-                <app-icon-link 
-                    [href]="'https://twitter.com/SankyuHikari'"
+
+                <app-icon-link [href]="'https://twitter.com/SankyuHikari'"
                     [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png'">
                 </app-icon-link>
 
-                <app-icon-link 
-                    [href]="'https://www.linkedin.com/in/light39/'"
+                <app-icon-link [href]="'https://www.linkedin.com/in/light39/'"
                     [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png'">
                 </app-icon-link>
 
-                <app-icon-link 
-                    [href]="'https://github.com/goingmyway243'"
+                <app-icon-link [href]="'https://github.com/goingmyway243'"
                     [iconLink]="'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png'">
                 </app-icon-link>
             </div>
@@ -62,5 +57,27 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="social-login" *ngIf="!socialUser">
+        <h2>Social login options</h2>
+
+        <asl-google-signin-button type="standard" size="large"></asl-google-signin-button>
+
+        <button class="fb-button" (click)="loginWithFB()">
+            <i class="uil uil-facebook"></i>
+            Login with Facebook
+        </button>
+    </div>
+
+    <div class="social-login" *ngIf="socialUser">
+        <h2>Welcome {{socialUser.name}}</h2>
+        <img [src]="socialUser.photoUrl" alt="">
+        <div>{{socialUser.email}}</div>
+
+        <button class="logout-button" (click)="logout()">
+            <i class="uil uil-signin"></i>
+            Log out
+        </button>
     </div>
 </div>

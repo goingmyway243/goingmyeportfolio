@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  SocialAuthService,
+  GoogleLoginProvider,
+  SocialUser,
+  FacebookLoginProvider,
+} from '@abacritt/angularx-social-login';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +12,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+  socialUser?: SocialUser;
 
-  constructor() { }
+  constructor(
+    private socialAuthService: SocialAuthService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.socialAuthService.authState.subscribe((user) => {
+      this.socialUser = user;
+      console.log(this.socialUser);
+    });
   }
 
+  loginWithFB(): void {
+    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
+  }
+
+  logout(): void {
+    this.socialAuthService.signOut();
+  }
 }
