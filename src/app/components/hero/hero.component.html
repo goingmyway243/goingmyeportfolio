@@ -1,0 +1,61 @@
+<section class="hero">
+  <!-- Animated background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- Parallax gradient background -->
+  <div class="gradient-bg"></div>
+
+  <!-- Hero content -->
+  <div class="container animate-fade-in">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title animate-fade-up delay-1">
+          {{ personalInfo.title }}
+        </h1>
+
+        <p class="hero-subtitle animate-fade-up delay-2">
+          Hi, I'm <span class="text-gradient">{{ personalInfo.name }}</span>
+        </p>
+
+        <p class="hero-description animate-fade-up delay-3">
+          {{ personalInfo.tagline }}
+        </p>
+
+        <div class="hero-buttons animate-fade-in delay-4">
+          <button class="button-primary animate-scale-pop delay-5">
+            View My Work
+          </button>
+          <button class="button-secondary animate-scale-pop delay-6">
+            Get In Touch
+          </button>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="{{ socialLinks.github }}" target="_blank" rel="noopener">GitHub</a>
+          <a href="{{ socialLinks.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="{{ socialLinks.email }}">Email</a>
+        </div>
+      </div>
+
+      <!-- Profile Image -->
+      <div class="hero-image">
+        <div class="image-wrapper animate-scale-pop delay-4">
+          <img [src]="personalInfo.profileImage" [alt]="personalInfo.name" />
+          <div class="image-glow"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Scroll indicator -->
+<a
+  class="scroll-indicator animate-pulse-y delay-6"
+  href="#about"
+>
+  <span>Scroll to explore</span>
+  <div class="scroll-icon">↓</div>
+</a>

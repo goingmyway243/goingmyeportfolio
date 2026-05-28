@@ -1,0 +1,23 @@
+<section class="section skills">
+  <div class="container fx-fade-in">
+    <h2 class="fx-fade-up">Skills & Expertise</h2>
+
+    <div class="skills-grid">
+      <div class="skill-category fx-scale-in" *ngFor="let category of skills">
+        <h3>{{ category.category }}</h3>
+
+        <div class="skill-items">
+          <div class="skill-item" *ngFor="let skill of category.items">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-level">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" [style.width.%]="skill.level"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

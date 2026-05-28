@@ -1,0 +1,31 @@
+<section class="section about">
+  <div class="container fx-fade-in">
+    <h2 class="fx-fade-up">About Me</h2>
+
+    <p class="intro fx-fade-up fx-delay-1">
+      I'm a passionate full-stack developer with {{ years }} years of experience
+      building scalable applications with .NET and Angular.
+    </p>
+
+    <div class="about-highlights">
+      <div class="highlight-card fx-scale-in" *ngFor="let section of sections">
+        <div class="highlight-icon">{{ section.icon }}</div>
+        <h3>{{ section.title }}</h3>
+        <p>{{ section.description }}</p>
+      </div>
+    </div>
+
+    <div class="timeline fx-fade-up fx-delay-2">
+      <h3>Journey</h3>
+      <div class="timeline-items">
+        <div class="timeline-item" *ngFor="let item of timeline">
+          <div class="timeline-year">{{ item.year }}</div>
+          <div class="timeline-content">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

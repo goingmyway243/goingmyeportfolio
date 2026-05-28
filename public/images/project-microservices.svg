@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Microservices project placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6d42" />
+      <stop offset="100%" stop-color="#ff2f77" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="#0d1530" />
+  <rect x="70" y="70" width="660" height="310" rx="24" fill="url(#bg)" opacity="0.9" />
+  <text x="400" y="210" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="700">Microservices System</text>
+  <text x="400" y="260" text-anchor="middle" fill="#ffe2ea" font-family="Segoe UI, Arial, sans-serif" font-size="24">Project Preview</text>
+</svg>

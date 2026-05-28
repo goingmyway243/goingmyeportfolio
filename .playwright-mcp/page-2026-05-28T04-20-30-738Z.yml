@@ -1,0 +1,94 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6] [cursor=pointer]: PORTFOLIO
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /hero
+        - listitem [ref=e10]:
+          - link "About" [ref=e11] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e12]:
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: /projects
+        - listitem [ref=e14]:
+          - link "Skills" [active] [ref=e15] [cursor=pointer]:
+            - /url: /skills
+        - listitem [ref=e16]:
+          - link "Contact" [ref=e17] [cursor=pointer]:
+            - /url: /contact
+  - main [ref=e18]:
+    - generic [ref=e80]:
+      - heading "Skills & Expertise" [level=2] [ref=e81]
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - heading "Backend" [level=3] [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e87]:
+              - generic [ref=e88]: C#
+              - generic [ref=e89]: 90%
+            - generic [ref=e93]:
+              - generic [ref=e94]: .NET Core
+              - generic [ref=e95]: 90%
+            - generic [ref=e99]:
+              - generic [ref=e100]: Entity Framework
+              - generic [ref=e101]: 85%
+            - generic [ref=e105]:
+              - generic [ref=e106]: SQL Server
+              - generic [ref=e107]: 85%
+        - generic [ref=e110]:
+          - heading "Frontend" [level=3] [ref=e111]
+          - generic [ref=e112]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: Angular
+              - generic [ref=e116]: 90%
+            - generic [ref=e120]:
+              - generic [ref=e121]: TypeScript
+              - generic [ref=e122]: 88%
+            - generic [ref=e126]:
+              - generic [ref=e127]: SCSS/CSS
+              - generic [ref=e128]: 85%
+            - generic [ref=e132]:
+              - generic [ref=e133]: RxJS
+              - generic [ref=e134]: 80%
+        - generic [ref=e137]:
+          - heading "DevOps & Infrastructure" [level=3] [ref=e138]
+          - generic [ref=e139]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: Azure
+              - generic [ref=e143]: 80%
+            - generic [ref=e147]:
+              - generic [ref=e148]: Docker
+              - generic [ref=e149]: 75%
+            - generic [ref=e153]:
+              - generic [ref=e154]: CI/CD Pipelines
+              - generic [ref=e155]: 75%
+            - generic [ref=e159]:
+              - generic [ref=e160]: Kubernetes
+              - generic [ref=e161]: 70%
+        - generic [ref=e164]:
+          - heading "Tools & Processes" [level=3] [ref=e165]
+          - generic [ref=e166]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: Git
+              - generic [ref=e170]: 90%
+            - generic [ref=e174]:
+              - generic [ref=e175]: Microservices
+              - generic [ref=e176]: 80%
+            - generic [ref=e180]:
+              - generic [ref=e181]: REST APIs
+              - generic [ref=e182]: 90%
+            - generic [ref=e186]:
+              - generic [ref=e187]: Agile/Scrum
+              - generic [ref=e188]: 85%
+  - contentinfo [ref=e71]:
+    - generic [ref=e72]:
+      - paragraph [ref=e73]: © 2026 Light - Nguyen Hai Dang. Built with Angular & Liquid Glass design.
+      - generic [ref=e74]:
+        - link "GitHub" [ref=e75] [cursor=pointer]:
+          - /url: https://github.com
+        - link "LinkedIn" [ref=e76] [cursor=pointer]:
+          - /url: https://linkedin.com
+        - link "Email" [ref=e77] [cursor=pointer]:
+          - /url: mailto:your.email@example.com

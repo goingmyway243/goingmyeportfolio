@@ -1,0 +1,85 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6] [cursor=pointer]: PORTFOLIO
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: /hero
+        - listitem [ref=e10]:
+          - link "About" [ref=e11] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e12]:
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: /projects
+        - listitem [ref=e14]:
+          - link "Skills" [ref=e15] [cursor=pointer]:
+            - /url: /skills
+        - listitem [ref=e16]:
+          - link "Contact" [ref=e17] [cursor=pointer]:
+            - /url: /contact
+  - main [ref=e18]:
+    - generic [ref=e21]:
+      - heading "Featured Projects" [level=2] [ref=e22]
+      - generic [ref=e23]:
+        - generic [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]:
+            - img "E-Commerce Platform" [ref=e26]
+            - generic [ref=e27]:
+              - link "View Code" [ref=e28]:
+                - /url: https://github.com/yourusername/ecommerce-platform
+              - link "Live Demo" [ref=e29]:
+                - /url: https://example-ecommerce.com
+          - generic [ref=e30]:
+            - heading "E-Commerce Platform" [level=3] [ref=e31]
+            - paragraph [ref=e32]: Full-stack e-commerce platform with real-time inventory management
+            - generic [ref=e33]:
+              - generic [ref=e34]: C#
+              - generic [ref=e35]: .NET 8
+              - generic [ref=e36]: Angular 18
+              - generic [ref=e37]: SQL Server
+              - generic [ref=e38]: Stripe
+              - generic [ref=e39]: Azure
+        - generic [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]:
+            - img "Real-Time Data Visualization Dashboard" [ref=e42]
+            - generic [ref=e43]:
+              - link "View Code" [ref=e44]:
+                - /url: https://github.com/yourusername/analytics-dashboard
+              - link "Live Demo" [ref=e45]:
+                - /url: https://example-dashboard.com
+          - generic [ref=e46]:
+            - heading "Real-Time Data Visualization Dashboard" [level=3] [ref=e47]
+            - paragraph [ref=e48]: Interactive dashboard for visualizing complex business metrics
+            - generic [ref=e49]:
+              - generic [ref=e50]: C#
+              - generic [ref=e51]: .NET Core
+              - generic [ref=e52]: Angular
+              - generic [ref=e53]: SignalR
+              - generic [ref=e54]: D3.js
+              - generic [ref=e55]: PostgreSQL
+        - generic [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]:
+            - img "Microservices Order Processing System" [ref=e58]
+            - link "View Code" [ref=e60]:
+              - /url: https://github.com/yourusername/microservices-orders
+          - generic [ref=e61]:
+            - heading "Microservices Order Processing System" [level=3] [ref=e62]
+            - paragraph [ref=e63]: Scalable microservices architecture for order processing
+            - generic [ref=e64]:
+              - generic [ref=e65]: C#
+              - generic [ref=e66]: .NET
+              - generic [ref=e67]: Kubernetes
+              - generic [ref=e68]: RabbitMQ
+              - generic [ref=e69]: Docker
+              - generic [ref=e70]: gRPC
+  - contentinfo [ref=e71]:
+    - generic [ref=e72]:
+      - paragraph [ref=e73]: © 2026 Light - Nguyen Hai Dang. Built with Angular & Liquid Glass design.
+      - generic [ref=e74]:
+        - link "GitHub" [ref=e75] [cursor=pointer]:
+          - /url: https://github.com
+        - link "LinkedIn" [ref=e76] [cursor=pointer]:
+          - /url: https://linkedin.com
+        - link "Email" [ref=e77] [cursor=pointer]:
+          - /url: mailto:your.email@example.com
