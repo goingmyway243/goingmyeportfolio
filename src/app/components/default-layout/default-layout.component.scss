@@ -1,5 +1,60 @@
 @use '../../../styles.scss' as *;
 
+/* ---- Global page background ---- */
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.page-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.22;
+  animation: page-float 28s ease-in-out infinite;
+
+  &--1 {
+    width: 500px; height: 500px;
+    background: var(--color-bright-blue);
+    top: 0; left: -80px;
+    animation-delay: 0s;
+  }
+  &--2 {
+    width: 420px; height: 420px;
+    background: var(--color-electric-violet);
+    bottom: 5%; right: -60px;
+    animation-delay: 9s;
+  }
+  &--3 {
+    width: 460px; height: 460px;
+    background: var(--color-vivid-pink);
+    top: 45%; right: 20%;
+    animation-delay: 18s;
+  }
+}
+
+.page-gradient {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-red-to-pink);
+  opacity: 0.04;
+  animation: page-glow 20s ease infinite;
+}
+
+@keyframes page-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(35px, -45px) scale(1.06); }
+  66% { transform: translate(-25px, 35px) scale(0.94); }
+}
+
+@keyframes page-glow {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.1; }
+}
+
 /* ---- Dot Navigation ---- */
 .dot-nav {
   position: fixed;

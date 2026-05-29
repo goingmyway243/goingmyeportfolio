@@ -1,7 +1,7 @@
 @use '../../../styles.scss' as *;
 
 .about {
-  background: linear-gradient(135deg, rgba(20, 25, 50, 0.5) 0%, rgba(20, 25, 50, 0.3) 100%);
+  background: transparent;
 
   .container {
     max-width: 1000px;
@@ -25,7 +25,7 @@
 
 .about-highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--spacing-2xl);
   margin-bottom: var(--spacing-3xl);
 
@@ -36,7 +36,7 @@
 
 .highlight-card {
   @include glass-panel-bold();
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-xl);
   text-align: center;
   transition: all 0.3s ease;
 

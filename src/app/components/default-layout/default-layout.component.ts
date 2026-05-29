@@ -15,6 +15,7 @@ import { ContactComponent } from '../contact/contact.component';
 })
 export class DefaultLayoutComponent implements AfterViewInit, OnDestroy {
   activeSection = signal('hero');
+  private readonly sectionVisibility = new Map<string, number>();
 
   readonly sections = [
     { id: 'hero', label: 'Home' },
@@ -42,12 +43,24 @@ export class DefaultLayoutComponent implements AfterViewInit, OnDestroy {
     this.sectionObserver = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            this.activeSection.set(entry.target.id);
+          const id = entry.target.id;
+          this.sectionVisibility.set(id, entry.isIntersecting ? entry.intersectionRatio : 0);
+        });
+
+        let nextActive = this.activeSection();
+        let maxRatio = -1;
+
+        this.sections.forEach(({ id }) => {
+          const ratio = this.sectionVisibility.get(id) ?? 0;
+          if (ratio > maxRatio) {
+            maxRatio = ratio;
+            nextActive = id;
           }
         });
+
+        this.activeSection.set(nextActive);
       },
-      { root: null, threshold: 0.5 }
+      { root: null, threshold: [0.2, 0.35, 0.5, 0.65, 0.8] }
     );
 
     this.sections.forEach(({ id }) => {

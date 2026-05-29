@@ -4,22 +4,54 @@
 
     <div class="projects-grid">
       <div class="project-card fx-scale-in" *ngFor="let project of projects">
-        <div class="project-image">
-          <img [src]="project.image" [alt]="project.title" />
-          <div class="overlay">
-            <a [href]="project.github" target="_blank" class="project-link">View Code</a>
-            <a *ngIf="project.liveDemo" [href]="project.liveDemo" target="_blank" class="project-link">Live Demo</a>
+        <div class="project-header">
+          <div class="project-icon-wrap">
+            <img class="project-icon" [src]="project.image" [alt]="project.title" />
+          </div>
+          <div class="project-header__meta">
+            <h3>{{ project.title }}</h3>
+            <p class="project-summary">{{ project.shortDescription }}</p>
+            <div class="project-actions">
+              <a [href]="project.github" target="_blank" rel="noopener" class="project-link">View Code</a>
+              <a *ngIf="project.liveDemo" [href]="project.liveDemo" target="_blank" rel="noopener" class="project-link project-link--secondary">Live Demo</a>
+            </div>
           </div>
         </div>
 
         <div class="project-content">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.shortDescription }}</p>
+          <ul class="project-highlights" *ngIf="project.highlights?.length">
+            <li *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+          </ul>
 
           <div class="technologies">
             <span *ngFor="let tech of project.technologies" class="tech-badge">
               {{ tech }}
             </span>
+          </div>
+
+          <div class="project-architecture" *ngIf="project.architecture?.length">
+            <h4 class="section-label">Architecture</h4>
+            <div class="arch-diagram">
+              <ng-container *ngFor="let layer of project.architecture; let last = last">
+                <div class="arch-layer" [attr.data-color]="layer.color">
+                  <span class="arch-layer__name">{{ layer.layer }}</span>
+                  <div class="arch-layer__items">
+                    <span class="arch-chip" *ngFor="let item of layer.items">{{ item }}</span>
+                  </div>
+                </div>
+                <div class="arch-connector" *ngIf="!last" aria-hidden="true"></div>
+              </ng-container>
+            </div>
+          </div>
+
+          <div class="project-gallery" *ngIf="project.screenshots?.length">
+            <h4>Product Screens</h4>
+            <div class="gallery-grid">
+              <figure class="gallery-item" *ngFor="let shot of getGalleryPreview(project)">
+                <img [src]="shot.src" [alt]="shot.label" loading="lazy" />
+                <figcaption>{{ shot.label }}</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </div>
